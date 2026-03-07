@@ -5,21 +5,22 @@ public class MainTudoEmUm {
     private static List<String> livros = new ArrayList<>(); // Persistencia em memoria
     private static Scanner sc = new Scanner(System.in);
     private static int totalEmprestimos = 0;
-    
+
     public static void main(String[] args) {
         System.out.println("=== BIBLIOTECA BAGUNCADA ===");
         carregarLivros(); // Persistencia misturada
-        
+
         while (true) {
             // Entrada misturada com UI
             System.out.println("\n1-Adicionar 2-Emprestar 3-Listar 4-Sair");
-            int op = sc.nextInt(); sc.nextLine();
-            
+            int op = sc.nextInt();
+            sc.nextLine();
+
             if (op == 1) {
                 // Entrada + Validacao misturada
                 System.out.print("Titulo: ");
                 String titulo = sc.nextLine();
-                if (titulo.length() < 3) { // Validacao inline
+                if (titulo.length() < 3) { // Validacao inline.
                     System.out.println("ERRO: Titulo curto!");
                     continue;
                 }
@@ -46,7 +47,8 @@ public class MainTudoEmUm {
                         break;
                     }
                 }
-                if (!encontrado) System.out.println("Livro nao encontrado!");
+                if (!encontrado)
+                    System.out.println("Livro nao encontrado!");
             } else if (op == 3) {
                 // Listagem com formatacao inline
                 System.out.println("Livros (" + livros.size() + "):");
@@ -62,7 +64,7 @@ public class MainTudoEmUm {
             }
         }
     }
-    
+
     private static void carregarLivros() {
         try {
             File f = new File("livros.txt");
@@ -77,7 +79,7 @@ public class MainTudoEmUm {
             System.out.println("Erro carregando: " + e.getMessage());
         }
     }
-    
+
     private static void salvarLivros() {
         try {
             PrintWriter pw = new PrintWriter("livros.txt");
