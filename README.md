@@ -1,1 +1,11 @@
-# refatorando_java_POO
+# Atividade 1 de boas práticas de programação
+
+## Integrantes da equipe:
+
+- LUIS FELIPE FERREIRA CALDARELLI
+- MARCOS YUDI KIMURA
+- RAFAEL EIJI HOKAMA UTIYAMA
+- SIBELLY VITÓRIA ANTONIO
+- THIAGO MOREIRA ANTONIASSI
+- WITOR TENÃ
+
