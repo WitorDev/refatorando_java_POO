@@ -37,6 +37,7 @@ public class Main {
 
                     case 4:
                         executar = false;
+                        System.out.println("Saindo...");
                         break;
 
                     default:

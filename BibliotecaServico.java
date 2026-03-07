@@ -34,7 +34,9 @@ public class BibliotecaServico {
     public List<Livro> listar() {
         return Collections.unmodifiableList(livros);
     }
-    // Retorna um Optional<Entity> para evitar o uso de null e facilitar o tratamento de erros 
+
+    // Retorna um Optional<Entity> para evitar o uso de null e facilitar o
+    // tratamento de erros
     private Optional<Livro> buscarLivroPorTitulo(String titulo) {
         return livros.stream()
                 .filter(l -> l.getTitulo().equalsIgnoreCase(titulo))

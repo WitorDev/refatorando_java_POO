@@ -8,12 +8,12 @@ public class LivroServico {
     public List<Livro> carregar() {
         List<Livro> livros = new ArrayList<>();
 
-        File file = new File(ARQUIVO);
-        if (!file.exists()) {
+        File baseDeDados = new File(ARQUIVO);
+        if (!baseDeDados.exists()) {
             return livros;
         }
 
-        try (Scanner sc = new Scanner(file)) {
+        try (Scanner sc = new Scanner(baseDeDados)) {
             while (sc.hasNextLine()) {
                 // Adicionado quantidade de livros para cada livro
                 String[] dados = sc.nextLine().split(";");
